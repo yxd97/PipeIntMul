@@ -1,0 +1,24 @@
+`protect BEGIN_PROTECTED
+`protect version = 1
+`protect encrypt_agent = "Model Technology", encrypt_agent_info = "DEV"
+`protect data_method = "aes128-cbc"
+`protect encoding = ( enctype = "base64" , bytes = 168 )
+`protect DATA_BLOCK
+jtNzhF8243EcloRxTSyISq2jUfQAFJ/GOepZPl5VsHcJeZ0jOxXHNIfVRaPAMcFH
+r0m/yg/yB7t0P7aZvR5oVPLJoBjiWDlIp0WO8DF5U7eexF9g+Y9/j974uabyNnbV
+FFMo/B4qqgnByxB6PFH85U3QiOJ8rxHFr9MuAqEuCNWFmvhO9O8j9m8zl4sx/ZBl
+JBpApGX6DPatiQ+83Q4qKIOs1YjBme8P5o4YB+R7qBsQaQ5zn3GAvkkXKBpri+qc
+1YP9ITvTksmbtd9lRomMImsQ/6JjrSz5zFfs70mWPWgppfmccvSLaRrxxuI4eERS
+dPhx5f8StvC0P/xgL5UnEuJv5kLTAHjHHSs6bd3MPfkvzZK/WgjauYa6GXWKPJ7T
+te+63Gt8IvMw5AZcN2udbj4QEflfKt70LA+9yCmc5K0mQ8J0dyUI/c39gXp6mb/m
+Io+jAIARpYl2qzJNcp8+RhLPj1T5BUC3O7nhaHpGMc5ctKeWbvDVmYVN94sib+bw
+X99zbfmsVL6qn1Ahnb6rtWBg/52ViDDe+LVSTJNnpWRDBaEFvG1L7dDGCbKp7CO6
+r4cPGGt806V5z+f+bLuB0j0+WxGenJM/v015De2oVLJIu1VnA/nxT5fjoGchUtj2
+pm0iwWfaqlFs6/JP0VQytffsCOT6Uz8nbEIbpPtH2PavxAk9qGYRE+utWoDUUmTc
+fJnydtDegcLjjzlGMqqkcucfoDwl3icpRgebh2YDQfjkWje0iNXRJF7Ni0qsf+Lz
+tA8xomyN1+w7yh/LlaD+RuuGPV6VAV+MTeo9XZ/GFmMh+1WUid+iINabC/sSMtzB
+V704m0MqIMDY2HwARmRFjCuzTjHBOrEXwPwFs8O/6s8uyemgRQpujdPxGB1t8YR1
+xHeVbdWhaYBndSyJM6KkREEeON8oAORAEtbRQzKl9WcNmcYwIhbNCiFLrsSrvLlr
+0eysNMfgEAPvor+iqYrhRGnPcrct5OpHflQOzUMLUsKhy5/2gbAYDKX9mkFSALu+
+m7ZQy22sjLyAhuraKNjK+A==
+`protect END_PROTECTED

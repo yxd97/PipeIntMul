@@ -1,0 +1,59 @@
+library verilog;
+use verilog.vl_types.all;
+entity X_FIFO36E1 is
+    generic(
+        ALMOST_EMPTY_OFFSET: vl_logic_vector(0 to 12) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        ALMOST_FULL_OFFSET: vl_logic_vector(0 to 12) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi1, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        DATA_WIDTH      : integer := 4;
+        DO_REG          : integer := 1;
+        EN_ECC_READ     : string  := "FALSE";
+        EN_ECC_WRITE    : string  := "FALSE";
+        EN_SYN          : string  := "FALSE";
+        FIFO_MODE       : string  := "FIFO36";
+        FIRST_WORD_FALL_THROUGH: string  := "FALSE";
+        INIT            : vl_logic_vector(0 to 71) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0);
+        LOC             : string  := "UNPLACED";
+        SIM_DEVICE      : string  := "VIRTEX6";
+        SRVAL           : vl_logic_vector(0 to 71) := (Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0, Hi0)
+    );
+    port(
+        ALMOSTEMPTY     : out    vl_logic;
+        ALMOSTFULL      : out    vl_logic;
+        DBITERR         : out    vl_logic;
+        DO              : out    vl_logic_vector(63 downto 0);
+        DOP             : out    vl_logic_vector(7 downto 0);
+        ECCPARITY       : out    vl_logic_vector(7 downto 0);
+        EMPTY           : out    vl_logic;
+        FULL            : out    vl_logic;
+        RDCOUNT         : out    vl_logic_vector(12 downto 0);
+        RDERR           : out    vl_logic;
+        SBITERR         : out    vl_logic;
+        WRCOUNT         : out    vl_logic_vector(12 downto 0);
+        WRERR           : out    vl_logic;
+        DI              : in     vl_logic_vector(63 downto 0);
+        DIP             : in     vl_logic_vector(7 downto 0);
+        INJECTDBITERR   : in     vl_logic;
+        INJECTSBITERR   : in     vl_logic;
+        RDCLK           : in     vl_logic;
+        RDEN            : in     vl_logic;
+        REGCE           : in     vl_logic;
+        RST             : in     vl_logic;
+        RSTREG          : in     vl_logic;
+        WRCLK           : in     vl_logic;
+        WREN            : in     vl_logic
+    );
+    attribute mti_svvh_generic_type : integer;
+    attribute mti_svvh_generic_type of ALMOST_EMPTY_OFFSET : constant is 1;
+    attribute mti_svvh_generic_type of ALMOST_FULL_OFFSET : constant is 1;
+    attribute mti_svvh_generic_type of DATA_WIDTH : constant is 2;
+    attribute mti_svvh_generic_type of DO_REG : constant is 2;
+    attribute mti_svvh_generic_type of EN_ECC_READ : constant is 1;
+    attribute mti_svvh_generic_type of EN_ECC_WRITE : constant is 1;
+    attribute mti_svvh_generic_type of EN_SYN : constant is 1;
+    attribute mti_svvh_generic_type of FIFO_MODE : constant is 1;
+    attribute mti_svvh_generic_type of FIRST_WORD_FALL_THROUGH : constant is 1;
+    attribute mti_svvh_generic_type of INIT : constant is 1;
+    attribute mti_svvh_generic_type of LOC : constant is 1;
+    attribute mti_svvh_generic_type of SIM_DEVICE : constant is 1;
+    attribute mti_svvh_generic_type of SRVAL : constant is 1;
+end X_FIFO36E1;
