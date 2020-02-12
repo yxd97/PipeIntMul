@@ -1,0 +1,598 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Feb 01 23:58:30 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+TIMEGRP clk = BEL "datapath/B_C2_REG/q_REG_31" BEL
+        "datapath/B_C2_REG/q_REG_30" BEL "datapath/B_C2_REG/q_REG_29" BEL
+        "datapath/B_C2_REG/q_REG_28" BEL "datapath/B_C2_REG/q_REG_27" BEL
+        "datapath/B_C2_REG/q_REG_26" BEL "datapath/B_C2_REG/q_REG_25" BEL
+        "datapath/B_C2_REG/q_REG_24" BEL "datapath/B_C2_REG/q_REG_23" BEL
+        "datapath/B_C2_REG/q_REG_22" BEL "datapath/B_C2_REG/q_REG_21" BEL
+        "datapath/B_C2_REG/q_REG_20" BEL "datapath/B_C2_REG/q_REG_19" BEL
+        "datapath/B_C2_REG/q_REG_18" BEL "datapath/B_C2_REG/q_REG_17" BEL
+        "datapath/B_C2_REG/q_REG_16" BEL "datapath/B_C2_REG/q_REG_15" BEL
+        "datapath/B_C2_REG/q_REG_14" BEL "datapath/B_C2_REG/q_REG_13" BEL
+        "datapath/B_C2_REG/q_REG_12" BEL "datapath/B_C2_REG/q_REG_11" BEL
+        "datapath/B_C2_REG/q_REG_10" BEL "datapath/B_C2_REG/q_REG_9" BEL
+        "datapath/B_C2_REG/q_REG_8" BEL "datapath/B_C2_REG/q_REG_7" BEL
+        "datapath/B_C2_REG/q_REG_6" BEL "datapath/B_C2_REG/q_REG_5" BEL
+        "datapath/B_C2_REG/q_REG_4" BEL "datapath/B_C2_REG/q_REG_3" BEL
+        "datapath/B_C2_REG/q_REG_2" BEL "datapath/B_C2_REG/q_REG_1" BEL
+        "datapath/B_C2_REG/q_REG_0" BEL "datapath/B_C1_REG/q_REG_31" BEL
+        "datapath/B_C1_REG/q_REG_30" BEL "datapath/B_C1_REG/q_REG_29" BEL
+        "datapath/B_C1_REG/q_REG_28" BEL "datapath/B_C1_REG/q_REG_27" BEL
+        "datapath/B_C1_REG/q_REG_26" BEL "datapath/B_C1_REG/q_REG_25" BEL
+        "datapath/B_C1_REG/q_REG_24" BEL "datapath/B_C1_REG/q_REG_23" BEL
+        "datapath/B_C1_REG/q_REG_22" BEL "datapath/B_C1_REG/q_REG_21" BEL
+        "datapath/B_C1_REG/q_REG_20" BEL "datapath/B_C1_REG/q_REG_19" BEL
+        "datapath/B_C1_REG/q_REG_18" BEL "datapath/B_C1_REG/q_REG_17" BEL
+        "datapath/B_C1_REG/q_REG_16" BEL "datapath/B_C1_REG/q_REG_15" BEL
+        "datapath/B_C1_REG/q_REG_14" BEL "datapath/B_C1_REG/q_REG_13" BEL
+        "datapath/B_C1_REG/q_REG_12" BEL "datapath/B_C1_REG/q_REG_11" BEL
+        "datapath/B_C1_REG/q_REG_10" BEL "datapath/B_C1_REG/q_REG_9" BEL
+        "datapath/B_C1_REG/q_REG_8" BEL "datapath/B_C1_REG/q_REG_7" BEL
+        "datapath/B_C1_REG/q_REG_6" BEL "datapath/B_C1_REG/q_REG_5" BEL
+        "datapath/B_C1_REG/q_REG_4" BEL "datapath/B_C1_REG/q_REG_3" BEL
+        "datapath/B_C1_REG/q_REG_2" BEL "datapath/B_C1_REG/q_REG_1" BEL
+        "datapath/B_C1_REG/q_REG_0" BEL "datapath/A3_C2_REG/q_REG_7" BEL
+        "datapath/A3_C2_REG/q_REG_6" BEL "datapath/A3_C2_REG/q_REG_5" BEL
+        "datapath/A3_C2_REG/q_REG_4" BEL "datapath/A3_C2_REG/q_REG_3" BEL
+        "datapath/A3_C2_REG/q_REG_2" BEL "datapath/A3_C2_REG/q_REG_1" BEL
+        "datapath/A3_C2_REG/q_REG_0" BEL "datapath/A2_C1_REG/q_REG_7" BEL
+        "datapath/A2_C1_REG/q_REG_6" BEL "datapath/A2_C1_REG/q_REG_5" BEL
+        "datapath/A2_C1_REG/q_REG_4" BEL "datapath/A2_C1_REG/q_REG_3" BEL
+        "datapath/A2_C1_REG/q_REG_2" BEL "datapath/A2_C1_REG/q_REG_1" BEL
+        "datapath/A2_C1_REG/q_REG_0" BEL "datapath/A3_C1_REG/q_REG_7" BEL
+        "datapath/A3_C1_REG/q_REG_6" BEL "datapath/A3_C1_REG/q_REG_5" BEL
+        "datapath/A3_C1_REG/q_REG_4" BEL "datapath/A3_C1_REG/q_REG_3" BEL
+        "datapath/A3_C1_REG/q_REG_2" BEL "datapath/A3_C1_REG/q_REG_1" BEL
+        "datapath/A3_C1_REG/q_REG_0" BEL "datapath/C0_MUL/IMULDP/regP_39" BEL
+        "datapath/C0_MUL/IMULDP/regP_38" BEL "datapath/C0_MUL/IMULDP/regP_37"
+        BEL "datapath/C0_MUL/IMULDP/regP_36" BEL
+        "datapath/C0_MUL/IMULDP/regP_35" BEL "datapath/C0_MUL/IMULDP/regP_34"
+        BEL "datapath/C0_MUL/IMULDP/regP_33" BEL
+        "datapath/C0_MUL/IMULDP/regP_32" BEL "datapath/C0_MUL/IMULDP/regP_31"
+        BEL "datapath/C0_MUL/IMULDP/regP_30" BEL
+        "datapath/C0_MUL/IMULDP/regP_29" BEL "datapath/C0_MUL/IMULDP/regP_28"
+        BEL "datapath/C0_MUL/IMULDP/regP_27" BEL
+        "datapath/C0_MUL/IMULDP/regP_26" BEL "datapath/C0_MUL/IMULDP/regP_25"
+        BEL "datapath/C0_MUL/IMULDP/regP_24" BEL
+        "datapath/C0_MUL/IMULDP/regP_23" BEL "datapath/C0_MUL/IMULDP/regP_22"
+        BEL "datapath/C0_MUL/IMULDP/regP_21" BEL
+        "datapath/C0_MUL/IMULDP/regP_20" BEL "datapath/C0_MUL/IMULDP/regP_19"
+        BEL "datapath/C0_MUL/IMULDP/regP_18" BEL
+        "datapath/C0_MUL/IMULDP/regP_17" BEL "datapath/C0_MUL/IMULDP/regP_16"
+        BEL "datapath/C0_MUL/IMULDP/regP_15" BEL
+        "datapath/C0_MUL/IMULDP/regP_14" BEL "datapath/C0_MUL/IMULDP/regP_13"
+        BEL "datapath/C0_MUL/IMULDP/regP_12" BEL
+        "datapath/C0_MUL/IMULDP/regP_11" BEL "datapath/C0_MUL/IMULDP/regP_10"
+        BEL "datapath/C0_MUL/IMULDP/regP_9" BEL
+        "datapath/C0_MUL/IMULDP/regP_8" BEL "datapath/C0_MUL/IMULDP/regP_7"
+        BEL "datapath/C0_MUL/IMULDP/regP_6" BEL
+        "datapath/C0_MUL/IMULDP/regP_5" BEL "datapath/C0_MUL/IMULDP/regP_4"
+        BEL "datapath/C0_MUL/IMULDP/regP_3" BEL
+        "datapath/C0_MUL/IMULDP/regP_2" BEL "datapath/C0_MUL/IMULDP/regP_1"
+        BEL "datapath/C0_MUL/IMULDP/regP_0" BEL
+        "datapath/C1_MUL/IMULDP/regP_39" BEL "datapath/C1_MUL/IMULDP/regP_38"
+        BEL "datapath/C1_MUL/IMULDP/regP_37" BEL
+        "datapath/C1_MUL/IMULDP/regP_36" BEL "datapath/C1_MUL/IMULDP/regP_35"
+        BEL "datapath/C1_MUL/IMULDP/regP_34" BEL
+        "datapath/C1_MUL/IMULDP/regP_33" BEL "datapath/C1_MUL/IMULDP/regP_32"
+        BEL "datapath/C1_MUL/IMULDP/regP_31" BEL
+        "datapath/C1_MUL/IMULDP/regP_30" BEL "datapath/C1_MUL/IMULDP/regP_29"
+        BEL "datapath/C1_MUL/IMULDP/regP_28" BEL
+        "datapath/C1_MUL/IMULDP/regP_27" BEL "datapath/C1_MUL/IMULDP/regP_26"
+        BEL "datapath/C1_MUL/IMULDP/regP_25" BEL
+        "datapath/C1_MUL/IMULDP/regP_24" BEL "datapath/C1_MUL/IMULDP/regP_23"
+        BEL "datapath/C1_MUL/IMULDP/regP_22" BEL
+        "datapath/C1_MUL/IMULDP/regP_21" BEL "datapath/C1_MUL/IMULDP/regP_20"
+        BEL "datapath/C1_MUL/IMULDP/regP_19" BEL
+        "datapath/C1_MUL/IMULDP/regP_18" BEL "datapath/C1_MUL/IMULDP/regP_17"
+        BEL "datapath/C1_MUL/IMULDP/regP_16" BEL
+        "datapath/C1_MUL/IMULDP/regP_15" BEL "datapath/C1_MUL/IMULDP/regP_14"
+        BEL "datapath/C1_MUL/IMULDP/regP_13" BEL
+        "datapath/C1_MUL/IMULDP/regP_12" BEL "datapath/C1_MUL/IMULDP/regP_11"
+        BEL "datapath/C1_MUL/IMULDP/regP_10" BEL
+        "datapath/C1_MUL/IMULDP/regP_9" BEL "datapath/C1_MUL/IMULDP/regP_8"
+        BEL "datapath/C1_MUL/IMULDP/regP_7" BEL
+        "datapath/C1_MUL/IMULDP/regP_6" BEL "datapath/C1_MUL/IMULDP/regP_5"
+        BEL "datapath/C1_MUL/IMULDP/regP_4" BEL
+        "datapath/C1_MUL/IMULDP/regP_3" BEL "datapath/C1_MUL/IMULDP/regP_2"
+        BEL "datapath/C1_MUL/IMULDP/regP_1" BEL
+        "datapath/C1_MUL/IMULDP/regP_0" BEL "datapath/C2_MUL/IMULDP/regP_39"
+        BEL "datapath/C2_MUL/IMULDP/regP_38" BEL
+        "datapath/C2_MUL/IMULDP/regP_37" BEL "datapath/C2_MUL/IMULDP/regP_36"
+        BEL "datapath/C2_MUL/IMULDP/regP_35" BEL
+        "datapath/C2_MUL/IMULDP/regP_34" BEL "datapath/C2_MUL/IMULDP/regP_33"
+        BEL "datapath/C2_MUL/IMULDP/regP_32" BEL
+        "datapath/C2_MUL/IMULDP/regP_31" BEL "datapath/C2_MUL/IMULDP/regP_30"
+        BEL "datapath/C2_MUL/IMULDP/regP_29" BEL
+        "datapath/C2_MUL/IMULDP/regP_28" BEL "datapath/C2_MUL/IMULDP/regP_27"
+        BEL "datapath/C2_MUL/IMULDP/regP_26" BEL
+        "datapath/C2_MUL/IMULDP/regP_25" BEL "datapath/C2_MUL/IMULDP/regP_24"
+        BEL "datapath/C2_MUL/IMULDP/regP_23" BEL
+        "datapath/C2_MUL/IMULDP/regP_22" BEL "datapath/C2_MUL/IMULDP/regP_21"
+        BEL "datapath/C2_MUL/IMULDP/regP_20" BEL
+        "datapath/C2_MUL/IMULDP/regP_19" BEL "datapath/C2_MUL/IMULDP/regP_18"
+        BEL "datapath/C2_MUL/IMULDP/regP_17" BEL
+        "datapath/C2_MUL/IMULDP/regP_16" BEL "datapath/C2_MUL/IMULDP/regP_15"
+        BEL "datapath/C2_MUL/IMULDP/regP_14" BEL
+        "datapath/C2_MUL/IMULDP/regP_13" BEL "datapath/C2_MUL/IMULDP/regP_12"
+        BEL "datapath/C2_MUL/IMULDP/regP_11" BEL
+        "datapath/C2_MUL/IMULDP/regP_10" BEL "datapath/C2_MUL/IMULDP/regP_9"
+        BEL "datapath/C2_MUL/IMULDP/regP_8" BEL
+        "datapath/C2_MUL/IMULDP/regP_7" BEL "datapath/C2_MUL/IMULDP/regP_6"
+        BEL "datapath/C2_MUL/IMULDP/regP_5" BEL
+        "datapath/C2_MUL/IMULDP/regP_4" BEL "datapath/C2_MUL/IMULDP/regP_3"
+        BEL "datapath/C2_MUL/IMULDP/regP_2" BEL
+        "datapath/C2_MUL/IMULDP/regP_1" BEL "datapath/C2_MUL/IMULDP/regP_0"
+        BEL "datapath/C3_MUL/IMULDP/regP_39" BEL
+        "datapath/C3_MUL/IMULDP/regP_38" BEL "datapath/C3_MUL/IMULDP/regP_37"
+        BEL "datapath/C3_MUL/IMULDP/regP_36" BEL
+        "datapath/C3_MUL/IMULDP/regP_35" BEL "datapath/C3_MUL/IMULDP/regP_34"
+        BEL "datapath/C3_MUL/IMULDP/regP_33" BEL
+        "datapath/C3_MUL/IMULDP/regP_32" BEL "datapath/C3_MUL/IMULDP/regP_31"
+        BEL "datapath/C3_MUL/IMULDP/regP_30" BEL
+        "datapath/C3_MUL/IMULDP/regP_29" BEL "datapath/C3_MUL/IMULDP/regP_28"
+        BEL "datapath/C3_MUL/IMULDP/regP_27" BEL
+        "datapath/C3_MUL/IMULDP/regP_26" BEL "datapath/C3_MUL/IMULDP/regP_25"
+        BEL "datapath/C3_MUL/IMULDP/regP_24" BEL
+        "datapath/C3_MUL/IMULDP/regP_23" BEL "datapath/C3_MUL/IMULDP/regP_22"
+        BEL "datapath/C3_MUL/IMULDP/regP_21" BEL
+        "datapath/C3_MUL/IMULDP/regP_20" BEL "datapath/C3_MUL/IMULDP/regP_19"
+        BEL "datapath/C3_MUL/IMULDP/regP_18" BEL
+        "datapath/C3_MUL/IMULDP/regP_17" BEL "datapath/C3_MUL/IMULDP/regP_16"
+        BEL "datapath/C3_MUL/IMULDP/regP_15" BEL
+        "datapath/C3_MUL/IMULDP/regP_14" BEL "datapath/C3_MUL/IMULDP/regP_13"
+        BEL "datapath/C3_MUL/IMULDP/regP_12" BEL
+        "datapath/C3_MUL/IMULDP/regP_11" BEL "datapath/C3_MUL/IMULDP/regP_10"
+        BEL "datapath/C3_MUL/IMULDP/regP_9" BEL
+        "datapath/C3_MUL/IMULDP/regP_8" BEL "datapath/C3_MUL/IMULDP/regP_7"
+        BEL "datapath/C3_MUL/IMULDP/regP_6" BEL
+        "datapath/C3_MUL/IMULDP/regP_5" BEL "datapath/C3_MUL/IMULDP/regP_4"
+        BEL "datapath/C3_MUL/IMULDP/regP_3" BEL
+        "datapath/C3_MUL/IMULDP/regP_2" BEL "datapath/C3_MUL/IMULDP/regP_1"
+        BEL "datapath/C3_MUL/IMULDP/regP_0" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd1" BEL
+        "datapath/C0_MUL/IMULCT/calc_cnt_3" BEL
+        "datapath/C0_MUL/IMULCT/calc_cnt_2" BEL
+        "datapath/C0_MUL/IMULCT/calc_cnt_1" BEL
+        "datapath/C0_MUL/IMULCT/calc_cnt_0" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd1" BEL
+        "datapath/C1_MUL/IMULCT/calc_cnt_3" BEL
+        "datapath/C1_MUL/IMULCT/calc_cnt_2" BEL
+        "datapath/C1_MUL/IMULCT/calc_cnt_1" BEL
+        "datapath/C1_MUL/IMULCT/calc_cnt_0" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd1" BEL
+        "datapath/C2_MUL/IMULCT/calc_cnt_3" BEL
+        "datapath/C2_MUL/IMULCT/calc_cnt_2" BEL
+        "datapath/C2_MUL/IMULCT/calc_cnt_1" BEL
+        "datapath/C2_MUL/IMULCT/calc_cnt_0" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd1" BEL
+        "datapath/C3_MUL/IMULCT/calc_cnt_3" BEL
+        "datapath/C3_MUL/IMULCT/calc_cnt_2" BEL
+        "datapath/C3_MUL/IMULCT/calc_cnt_1" BEL
+        "datapath/C3_MUL/IMULCT/calc_cnt_0" BEL "datapath/P0_C3_REG/q_REG_39"
+        BEL "datapath/P0_C3_REG/q_REG_38" BEL "datapath/P0_C3_REG/q_REG_37"
+        BEL "datapath/P0_C3_REG/q_REG_36" BEL "datapath/P0_C3_REG/q_REG_35"
+        BEL "datapath/P0_C3_REG/q_REG_34" BEL "datapath/P0_C3_REG/q_REG_33"
+        BEL "datapath/P0_C3_REG/q_REG_32" BEL "datapath/P0_C3_REG/q_REG_31"
+        BEL "datapath/P0_C3_REG/q_REG_30" BEL "datapath/P0_C3_REG/q_REG_29"
+        BEL "datapath/P0_C3_REG/q_REG_28" BEL "datapath/P0_C3_REG/q_REG_27"
+        BEL "datapath/P0_C3_REG/q_REG_26" BEL "datapath/P0_C3_REG/q_REG_25"
+        BEL "datapath/P0_C3_REG/q_REG_24" BEL "datapath/P0_C3_REG/q_REG_23"
+        BEL "datapath/P0_C3_REG/q_REG_22" BEL "datapath/P0_C3_REG/q_REG_21"
+        BEL "datapath/P0_C3_REG/q_REG_20" BEL "datapath/P0_C3_REG/q_REG_19"
+        BEL "datapath/P0_C3_REG/q_REG_18" BEL "datapath/P0_C3_REG/q_REG_17"
+        BEL "datapath/P0_C3_REG/q_REG_16" BEL "datapath/P0_C3_REG/q_REG_15"
+        BEL "datapath/P0_C3_REG/q_REG_14" BEL "datapath/P0_C3_REG/q_REG_13"
+        BEL "datapath/P0_C3_REG/q_REG_12" BEL "datapath/P0_C3_REG/q_REG_11"
+        BEL "datapath/P0_C3_REG/q_REG_10" BEL "datapath/P0_C3_REG/q_REG_9" BEL
+        "datapath/P0_C3_REG/q_REG_8" BEL "datapath/P0_C3_REG/q_REG_7" BEL
+        "datapath/P0_C3_REG/q_REG_6" BEL "datapath/P0_C3_REG/q_REG_5" BEL
+        "datapath/P0_C3_REG/q_REG_4" BEL "datapath/P0_C3_REG/q_REG_3" BEL
+        "datapath/P0_C3_REG/q_REG_2" BEL "datapath/P0_C3_REG/q_REG_1" BEL
+        "datapath/P0_C3_REG/q_REG_0" BEL "datapath/P1_C3_REG/q_REG_39" BEL
+        "datapath/P1_C3_REG/q_REG_38" BEL "datapath/P1_C3_REG/q_REG_37" BEL
+        "datapath/P1_C3_REG/q_REG_36" BEL "datapath/P1_C3_REG/q_REG_35" BEL
+        "datapath/P1_C3_REG/q_REG_34" BEL "datapath/P1_C3_REG/q_REG_33" BEL
+        "datapath/P1_C3_REG/q_REG_32" BEL "datapath/P1_C3_REG/q_REG_31" BEL
+        "datapath/P1_C3_REG/q_REG_30" BEL "datapath/P1_C3_REG/q_REG_29" BEL
+        "datapath/P1_C3_REG/q_REG_28" BEL "datapath/P1_C3_REG/q_REG_27" BEL
+        "datapath/P1_C3_REG/q_REG_26" BEL "datapath/P1_C3_REG/q_REG_25" BEL
+        "datapath/P1_C3_REG/q_REG_24" BEL "datapath/P1_C3_REG/q_REG_23" BEL
+        "datapath/P1_C3_REG/q_REG_22" BEL "datapath/P1_C3_REG/q_REG_21" BEL
+        "datapath/P1_C3_REG/q_REG_20" BEL "datapath/P1_C3_REG/q_REG_19" BEL
+        "datapath/P1_C3_REG/q_REG_18" BEL "datapath/P1_C3_REG/q_REG_17" BEL
+        "datapath/P1_C3_REG/q_REG_16" BEL "datapath/P1_C3_REG/q_REG_15" BEL
+        "datapath/P1_C3_REG/q_REG_14" BEL "datapath/P1_C3_REG/q_REG_13" BEL
+        "datapath/P1_C3_REG/q_REG_12" BEL "datapath/P1_C3_REG/q_REG_11" BEL
+        "datapath/P1_C3_REG/q_REG_10" BEL "datapath/P1_C3_REG/q_REG_9" BEL
+        "datapath/P1_C3_REG/q_REG_8" BEL "datapath/P1_C3_REG/q_REG_7" BEL
+        "datapath/P1_C3_REG/q_REG_6" BEL "datapath/P1_C3_REG/q_REG_5" BEL
+        "datapath/P1_C3_REG/q_REG_4" BEL "datapath/P1_C3_REG/q_REG_3" BEL
+        "datapath/P1_C3_REG/q_REG_2" BEL "datapath/P1_C3_REG/q_REG_1" BEL
+        "datapath/P1_C3_REG/q_REG_0" BEL "datapath/P2_C3_REG/q_REG_39" BEL
+        "datapath/P2_C3_REG/q_REG_38" BEL "datapath/P2_C3_REG/q_REG_37" BEL
+        "datapath/P2_C3_REG/q_REG_36" BEL "datapath/P2_C3_REG/q_REG_35" BEL
+        "datapath/P2_C3_REG/q_REG_34" BEL "datapath/P2_C3_REG/q_REG_33" BEL
+        "datapath/P2_C3_REG/q_REG_32" BEL "datapath/P2_C3_REG/q_REG_31" BEL
+        "datapath/P2_C3_REG/q_REG_30" BEL "datapath/P2_C3_REG/q_REG_29" BEL
+        "datapath/P2_C3_REG/q_REG_28" BEL "datapath/P2_C3_REG/q_REG_27" BEL
+        "datapath/P2_C3_REG/q_REG_26" BEL "datapath/P2_C3_REG/q_REG_25" BEL
+        "datapath/P2_C3_REG/q_REG_24" BEL "datapath/P2_C3_REG/q_REG_23" BEL
+        "datapath/P2_C3_REG/q_REG_22" BEL "datapath/P2_C3_REG/q_REG_21" BEL
+        "datapath/P2_C3_REG/q_REG_20" BEL "datapath/P2_C3_REG/q_REG_19" BEL
+        "datapath/P2_C3_REG/q_REG_18" BEL "datapath/P2_C3_REG/q_REG_17" BEL
+        "datapath/P2_C3_REG/q_REG_16" BEL "datapath/P2_C3_REG/q_REG_15" BEL
+        "datapath/P2_C3_REG/q_REG_14" BEL "datapath/P2_C3_REG/q_REG_13" BEL
+        "datapath/P2_C3_REG/q_REG_12" BEL "datapath/P2_C3_REG/q_REG_11" BEL
+        "datapath/P2_C3_REG/q_REG_10" BEL "datapath/P2_C3_REG/q_REG_9" BEL
+        "datapath/P2_C3_REG/q_REG_8" BEL "datapath/P2_C3_REG/q_REG_7" BEL
+        "datapath/P2_C3_REG/q_REG_6" BEL "datapath/P2_C3_REG/q_REG_5" BEL
+        "datapath/P2_C3_REG/q_REG_4" BEL "datapath/P2_C3_REG/q_REG_3" BEL
+        "datapath/P2_C3_REG/q_REG_2" BEL "datapath/P2_C3_REG/q_REG_1" BEL
+        "datapath/P2_C3_REG/q_REG_0" BEL "datapath/P3_C3_REG/q_REG_39" BEL
+        "datapath/P3_C3_REG/q_REG_38" BEL "datapath/P3_C3_REG/q_REG_37" BEL
+        "datapath/P3_C3_REG/q_REG_36" BEL "datapath/P3_C3_REG/q_REG_35" BEL
+        "datapath/P3_C3_REG/q_REG_34" BEL "datapath/P3_C3_REG/q_REG_33" BEL
+        "datapath/P3_C3_REG/q_REG_32" BEL "datapath/P3_C3_REG/q_REG_31" BEL
+        "datapath/P3_C3_REG/q_REG_30" BEL "datapath/P3_C3_REG/q_REG_29" BEL
+        "datapath/P3_C3_REG/q_REG_28" BEL "datapath/P3_C3_REG/q_REG_27" BEL
+        "datapath/P3_C3_REG/q_REG_26" BEL "datapath/P3_C3_REG/q_REG_25" BEL
+        "datapath/P3_C3_REG/q_REG_24" BEL "datapath/P3_C3_REG/q_REG_23" BEL
+        "datapath/P3_C3_REG/q_REG_22" BEL "datapath/P3_C3_REG/q_REG_21" BEL
+        "datapath/P3_C3_REG/q_REG_20" BEL "datapath/P3_C3_REG/q_REG_19" BEL
+        "datapath/P3_C3_REG/q_REG_18" BEL "datapath/P3_C3_REG/q_REG_17" BEL
+        "datapath/P3_C3_REG/q_REG_16" BEL "datapath/P3_C3_REG/q_REG_15" BEL
+        "datapath/P3_C3_REG/q_REG_14" BEL "datapath/P3_C3_REG/q_REG_13" BEL
+        "datapath/P3_C3_REG/q_REG_12" BEL "datapath/P3_C3_REG/q_REG_11" BEL
+        "datapath/P3_C3_REG/q_REG_10" BEL "datapath/P3_C3_REG/q_REG_9" BEL
+        "datapath/P3_C3_REG/q_REG_8" BEL "datapath/P3_C3_REG/q_REG_7" BEL
+        "datapath/P3_C3_REG/q_REG_6" BEL "datapath/P3_C3_REG/q_REG_5" BEL
+        "datapath/P3_C3_REG/q_REG_4" BEL "datapath/P3_C3_REG/q_REG_3" BEL
+        "datapath/P3_C3_REG/q_REG_2" BEL "datapath/P3_C3_REG/q_REG_1" BEL
+        "datapath/P3_C3_REG/q_REG_0" BEL "datapath/P0_C2_REG/q_REG_39" BEL
+        "datapath/P0_C2_REG/q_REG_38" BEL "datapath/P0_C2_REG/q_REG_37" BEL
+        "datapath/P0_C2_REG/q_REG_36" BEL "datapath/P0_C2_REG/q_REG_35" BEL
+        "datapath/P0_C2_REG/q_REG_34" BEL "datapath/P0_C2_REG/q_REG_33" BEL
+        "datapath/P0_C2_REG/q_REG_32" BEL "datapath/P0_C2_REG/q_REG_31" BEL
+        "datapath/P0_C2_REG/q_REG_30" BEL "datapath/P0_C2_REG/q_REG_29" BEL
+        "datapath/P0_C2_REG/q_REG_28" BEL "datapath/P0_C2_REG/q_REG_27" BEL
+        "datapath/P0_C2_REG/q_REG_26" BEL "datapath/P0_C2_REG/q_REG_25" BEL
+        "datapath/P0_C2_REG/q_REG_24" BEL "datapath/P0_C2_REG/q_REG_23" BEL
+        "datapath/P0_C2_REG/q_REG_22" BEL "datapath/P0_C2_REG/q_REG_21" BEL
+        "datapath/P0_C2_REG/q_REG_20" BEL "datapath/P0_C2_REG/q_REG_19" BEL
+        "datapath/P0_C2_REG/q_REG_18" BEL "datapath/P0_C2_REG/q_REG_17" BEL
+        "datapath/P0_C2_REG/q_REG_16" BEL "datapath/P0_C2_REG/q_REG_15" BEL
+        "datapath/P0_C2_REG/q_REG_14" BEL "datapath/P0_C2_REG/q_REG_13" BEL
+        "datapath/P0_C2_REG/q_REG_12" BEL "datapath/P0_C2_REG/q_REG_11" BEL
+        "datapath/P0_C2_REG/q_REG_10" BEL "datapath/P0_C2_REG/q_REG_9" BEL
+        "datapath/P0_C2_REG/q_REG_8" BEL "datapath/P0_C2_REG/q_REG_7" BEL
+        "datapath/P0_C2_REG/q_REG_6" BEL "datapath/P0_C2_REG/q_REG_5" BEL
+        "datapath/P0_C2_REG/q_REG_4" BEL "datapath/P0_C2_REG/q_REG_3" BEL
+        "datapath/P0_C2_REG/q_REG_2" BEL "datapath/P0_C2_REG/q_REG_1" BEL
+        "datapath/P0_C2_REG/q_REG_0" BEL "datapath/P1_C2_REG/q_REG_39" BEL
+        "datapath/P1_C2_REG/q_REG_38" BEL "datapath/P1_C2_REG/q_REG_37" BEL
+        "datapath/P1_C2_REG/q_REG_36" BEL "datapath/P1_C2_REG/q_REG_35" BEL
+        "datapath/P1_C2_REG/q_REG_34" BEL "datapath/P1_C2_REG/q_REG_33" BEL
+        "datapath/P1_C2_REG/q_REG_32" BEL "datapath/P1_C2_REG/q_REG_31" BEL
+        "datapath/P1_C2_REG/q_REG_30" BEL "datapath/P1_C2_REG/q_REG_29" BEL
+        "datapath/P1_C2_REG/q_REG_28" BEL "datapath/P1_C2_REG/q_REG_27" BEL
+        "datapath/P1_C2_REG/q_REG_26" BEL "datapath/P1_C2_REG/q_REG_25" BEL
+        "datapath/P1_C2_REG/q_REG_24" BEL "datapath/P1_C2_REG/q_REG_23" BEL
+        "datapath/P1_C2_REG/q_REG_22" BEL "datapath/P1_C2_REG/q_REG_21" BEL
+        "datapath/P1_C2_REG/q_REG_20" BEL "datapath/P1_C2_REG/q_REG_19" BEL
+        "datapath/P1_C2_REG/q_REG_18" BEL "datapath/P1_C2_REG/q_REG_17" BEL
+        "datapath/P1_C2_REG/q_REG_16" BEL "datapath/P1_C2_REG/q_REG_15" BEL
+        "datapath/P1_C2_REG/q_REG_14" BEL "datapath/P1_C2_REG/q_REG_13" BEL
+        "datapath/P1_C2_REG/q_REG_12" BEL "datapath/P1_C2_REG/q_REG_11" BEL
+        "datapath/P1_C2_REG/q_REG_10" BEL "datapath/P1_C2_REG/q_REG_9" BEL
+        "datapath/P1_C2_REG/q_REG_8" BEL "datapath/P1_C2_REG/q_REG_7" BEL
+        "datapath/P1_C2_REG/q_REG_6" BEL "datapath/P1_C2_REG/q_REG_5" BEL
+        "datapath/P1_C2_REG/q_REG_4" BEL "datapath/P1_C2_REG/q_REG_3" BEL
+        "datapath/P1_C2_REG/q_REG_2" BEL "datapath/P1_C2_REG/q_REG_1" BEL
+        "datapath/P1_C2_REG/q_REG_0" BEL "datapath/P2_C2_REG/q_REG_39" BEL
+        "datapath/P2_C2_REG/q_REG_38" BEL "datapath/P2_C2_REG/q_REG_37" BEL
+        "datapath/P2_C2_REG/q_REG_36" BEL "datapath/P2_C2_REG/q_REG_35" BEL
+        "datapath/P2_C2_REG/q_REG_34" BEL "datapath/P2_C2_REG/q_REG_33" BEL
+        "datapath/P2_C2_REG/q_REG_32" BEL "datapath/P2_C2_REG/q_REG_31" BEL
+        "datapath/P2_C2_REG/q_REG_30" BEL "datapath/P2_C2_REG/q_REG_29" BEL
+        "datapath/P2_C2_REG/q_REG_28" BEL "datapath/P2_C2_REG/q_REG_27" BEL
+        "datapath/P2_C2_REG/q_REG_26" BEL "datapath/P2_C2_REG/q_REG_25" BEL
+        "datapath/P2_C2_REG/q_REG_24" BEL "datapath/P2_C2_REG/q_REG_23" BEL
+        "datapath/P2_C2_REG/q_REG_22" BEL "datapath/P2_C2_REG/q_REG_21" BEL
+        "datapath/P2_C2_REG/q_REG_20" BEL "datapath/P2_C2_REG/q_REG_19" BEL
+        "datapath/P2_C2_REG/q_REG_18" BEL "datapath/P2_C2_REG/q_REG_17" BEL
+        "datapath/P2_C2_REG/q_REG_16" BEL "datapath/P2_C2_REG/q_REG_15" BEL
+        "datapath/P2_C2_REG/q_REG_14" BEL "datapath/P2_C2_REG/q_REG_13" BEL
+        "datapath/P2_C2_REG/q_REG_12" BEL "datapath/P2_C2_REG/q_REG_11" BEL
+        "datapath/P2_C2_REG/q_REG_10" BEL "datapath/P2_C2_REG/q_REG_9" BEL
+        "datapath/P2_C2_REG/q_REG_8" BEL "datapath/P2_C2_REG/q_REG_7" BEL
+        "datapath/P2_C2_REG/q_REG_6" BEL "datapath/P2_C2_REG/q_REG_5" BEL
+        "datapath/P2_C2_REG/q_REG_4" BEL "datapath/P2_C2_REG/q_REG_3" BEL
+        "datapath/P2_C2_REG/q_REG_2" BEL "datapath/P2_C2_REG/q_REG_1" BEL
+        "datapath/P2_C2_REG/q_REG_0" BEL "datapath/P0_C1_REG/q_REG_39" BEL
+        "datapath/P0_C1_REG/q_REG_38" BEL "datapath/P0_C1_REG/q_REG_37" BEL
+        "datapath/P0_C1_REG/q_REG_36" BEL "datapath/P0_C1_REG/q_REG_35" BEL
+        "datapath/P0_C1_REG/q_REG_34" BEL "datapath/P0_C1_REG/q_REG_33" BEL
+        "datapath/P0_C1_REG/q_REG_32" BEL "datapath/P0_C1_REG/q_REG_31" BEL
+        "datapath/P0_C1_REG/q_REG_30" BEL "datapath/P0_C1_REG/q_REG_29" BEL
+        "datapath/P0_C1_REG/q_REG_28" BEL "datapath/P0_C1_REG/q_REG_27" BEL
+        "datapath/P0_C1_REG/q_REG_26" BEL "datapath/P0_C1_REG/q_REG_25" BEL
+        "datapath/P0_C1_REG/q_REG_24" BEL "datapath/P0_C1_REG/q_REG_23" BEL
+        "datapath/P0_C1_REG/q_REG_22" BEL "datapath/P0_C1_REG/q_REG_21" BEL
+        "datapath/P0_C1_REG/q_REG_20" BEL "datapath/P0_C1_REG/q_REG_19" BEL
+        "datapath/P0_C1_REG/q_REG_18" BEL "datapath/P0_C1_REG/q_REG_17" BEL
+        "datapath/P0_C1_REG/q_REG_16" BEL "datapath/P0_C1_REG/q_REG_15" BEL
+        "datapath/P0_C1_REG/q_REG_14" BEL "datapath/P0_C1_REG/q_REG_13" BEL
+        "datapath/P0_C1_REG/q_REG_12" BEL "datapath/P0_C1_REG/q_REG_11" BEL
+        "datapath/P0_C1_REG/q_REG_10" BEL "datapath/P0_C1_REG/q_REG_9" BEL
+        "datapath/P0_C1_REG/q_REG_8" BEL "datapath/P0_C1_REG/q_REG_7" BEL
+        "datapath/P0_C1_REG/q_REG_6" BEL "datapath/P0_C1_REG/q_REG_5" BEL
+        "datapath/P0_C1_REG/q_REG_4" BEL "datapath/P0_C1_REG/q_REG_3" BEL
+        "datapath/P0_C1_REG/q_REG_2" BEL "datapath/P0_C1_REG/q_REG_1" BEL
+        "datapath/P0_C1_REG/q_REG_0" BEL "datapath/P1_C1_REG/q_REG_39" BEL
+        "datapath/P1_C1_REG/q_REG_38" BEL "datapath/P1_C1_REG/q_REG_37" BEL
+        "datapath/P1_C1_REG/q_REG_36" BEL "datapath/P1_C1_REG/q_REG_35" BEL
+        "datapath/P1_C1_REG/q_REG_34" BEL "datapath/P1_C1_REG/q_REG_33" BEL
+        "datapath/P1_C1_REG/q_REG_32" BEL "datapath/P1_C1_REG/q_REG_31" BEL
+        "datapath/P1_C1_REG/q_REG_30" BEL "datapath/P1_C1_REG/q_REG_29" BEL
+        "datapath/P1_C1_REG/q_REG_28" BEL "datapath/P1_C1_REG/q_REG_27" BEL
+        "datapath/P1_C1_REG/q_REG_26" BEL "datapath/P1_C1_REG/q_REG_25" BEL
+        "datapath/P1_C1_REG/q_REG_24" BEL "datapath/P1_C1_REG/q_REG_23" BEL
+        "datapath/P1_C1_REG/q_REG_22" BEL "datapath/P1_C1_REG/q_REG_21" BEL
+        "datapath/P1_C1_REG/q_REG_20" BEL "datapath/P1_C1_REG/q_REG_19" BEL
+        "datapath/P1_C1_REG/q_REG_18" BEL "datapath/P1_C1_REG/q_REG_17" BEL
+        "datapath/P1_C1_REG/q_REG_16" BEL "datapath/P1_C1_REG/q_REG_15" BEL
+        "datapath/P1_C1_REG/q_REG_14" BEL "datapath/P1_C1_REG/q_REG_13" BEL
+        "datapath/P1_C1_REG/q_REG_12" BEL "datapath/P1_C1_REG/q_REG_11" BEL
+        "datapath/P1_C1_REG/q_REG_10" BEL "datapath/P1_C1_REG/q_REG_9" BEL
+        "datapath/P1_C1_REG/q_REG_8" BEL "datapath/P1_C1_REG/q_REG_7" BEL
+        "datapath/P1_C1_REG/q_REG_6" BEL "datapath/P1_C1_REG/q_REG_5" BEL
+        "datapath/P1_C1_REG/q_REG_4" BEL "datapath/P1_C1_REG/q_REG_3" BEL
+        "datapath/P1_C1_REG/q_REG_2" BEL "datapath/P1_C1_REG/q_REG_1" BEL
+        "datapath/P1_C1_REG/q_REG_0" BEL "control/commit_REG" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd2" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd2" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd2" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd2" BEL "control/val_C3"
+        BEL "control/val_C2" BEL "control/val_C1" BEL
+        "datapath/B_C0_REG/q_REG_31" BEL "datapath/B_C0_REG/q_REG_30" BEL
+        "datapath/B_C0_REG/q_REG_29" BEL "datapath/B_C0_REG/q_REG_28" BEL
+        "datapath/B_C0_REG/q_REG_27" BEL "datapath/B_C0_REG/q_REG_26" BEL
+        "datapath/B_C0_REG/q_REG_25" BEL "datapath/B_C0_REG/q_REG_24" BEL
+        "datapath/B_C0_REG/q_REG_23" BEL "datapath/B_C0_REG/q_REG_22" BEL
+        "datapath/B_C0_REG/q_REG_21" BEL "datapath/B_C0_REG/q_REG_20" BEL
+        "datapath/B_C0_REG/q_REG_19" BEL "datapath/B_C0_REG/q_REG_18" BEL
+        "datapath/B_C0_REG/q_REG_17" BEL "datapath/B_C0_REG/q_REG_16" BEL
+        "datapath/B_C0_REG/q_REG_15" BEL "datapath/B_C0_REG/q_REG_14" BEL
+        "datapath/B_C0_REG/q_REG_13" BEL "datapath/B_C0_REG/q_REG_12" BEL
+        "datapath/B_C0_REG/q_REG_11" BEL "datapath/B_C0_REG/q_REG_10" BEL
+        "datapath/B_C0_REG/q_REG_9" BEL "datapath/B_C0_REG/q_REG_8" BEL
+        "datapath/B_C0_REG/q_REG_7" BEL "datapath/B_C0_REG/q_REG_6" BEL
+        "datapath/B_C0_REG/q_REG_5" BEL "datapath/B_C0_REG/q_REG_4" BEL
+        "datapath/B_C0_REG/q_REG_3" BEL "datapath/B_C0_REG/q_REG_2" BEL
+        "datapath/B_C0_REG/q_REG_1" BEL "datapath/B_C0_REG/q_REG_0" BEL
+        "datapath/B_MF_REG/q_REG_31" BEL "datapath/B_MF_REG/q_REG_30" BEL
+        "datapath/B_MF_REG/q_REG_29" BEL "datapath/B_MF_REG/q_REG_28" BEL
+        "datapath/B_MF_REG/q_REG_27" BEL "datapath/B_MF_REG/q_REG_26" BEL
+        "datapath/B_MF_REG/q_REG_25" BEL "datapath/B_MF_REG/q_REG_24" BEL
+        "datapath/B_MF_REG/q_REG_23" BEL "datapath/B_MF_REG/q_REG_22" BEL
+        "datapath/B_MF_REG/q_REG_21" BEL "datapath/B_MF_REG/q_REG_20" BEL
+        "datapath/B_MF_REG/q_REG_19" BEL "datapath/B_MF_REG/q_REG_18" BEL
+        "datapath/B_MF_REG/q_REG_17" BEL "datapath/B_MF_REG/q_REG_16" BEL
+        "datapath/B_MF_REG/q_REG_15" BEL "datapath/B_MF_REG/q_REG_14" BEL
+        "datapath/B_MF_REG/q_REG_13" BEL "datapath/B_MF_REG/q_REG_12" BEL
+        "datapath/B_MF_REG/q_REG_11" BEL "datapath/B_MF_REG/q_REG_10" BEL
+        "datapath/B_MF_REG/q_REG_9" BEL "datapath/B_MF_REG/q_REG_8" BEL
+        "datapath/B_MF_REG/q_REG_7" BEL "datapath/B_MF_REG/q_REG_6" BEL
+        "datapath/B_MF_REG/q_REG_5" BEL "datapath/B_MF_REG/q_REG_4" BEL
+        "datapath/B_MF_REG/q_REG_3" BEL "datapath/B_MF_REG/q_REG_2" BEL
+        "datapath/B_MF_REG/q_REG_1" BEL "datapath/B_MF_REG/q_REG_0" BEL
+        "datapath/A1_C0_REG/q_REG_7" BEL "datapath/A1_C0_REG/q_REG_6" BEL
+        "datapath/A1_C0_REG/q_REG_5" BEL "datapath/A1_C0_REG/q_REG_4" BEL
+        "datapath/A1_C0_REG/q_REG_3" BEL "datapath/A1_C0_REG/q_REG_2" BEL
+        "datapath/A1_C0_REG/q_REG_1" BEL "datapath/A1_C0_REG/q_REG_0" BEL
+        "datapath/A2_C0_REG/q_REG_7" BEL "datapath/A2_C0_REG/q_REG_6" BEL
+        "datapath/A2_C0_REG/q_REG_5" BEL "datapath/A2_C0_REG/q_REG_4" BEL
+        "datapath/A2_C0_REG/q_REG_3" BEL "datapath/A2_C0_REG/q_REG_2" BEL
+        "datapath/A2_C0_REG/q_REG_1" BEL "datapath/A2_C0_REG/q_REG_0" BEL
+        "datapath/A3_C0_REG/q_REG_7" BEL "datapath/A3_C0_REG/q_REG_6" BEL
+        "datapath/A3_C0_REG/q_REG_5" BEL "datapath/A3_C0_REG/q_REG_4" BEL
+        "datapath/A3_C0_REG/q_REG_3" BEL "datapath/A3_C0_REG/q_REG_2" BEL
+        "datapath/A3_C0_REG/q_REG_1" BEL "datapath/A3_C0_REG/q_REG_0" BEL
+        "datapath/A0_MF_REG/q_REG_7" BEL "datapath/A0_MF_REG/q_REG_6" BEL
+        "datapath/A0_MF_REG/q_REG_5" BEL "datapath/A0_MF_REG/q_REG_4" BEL
+        "datapath/A0_MF_REG/q_REG_3" BEL "datapath/A0_MF_REG/q_REG_2" BEL
+        "datapath/A0_MF_REG/q_REG_1" BEL "datapath/A0_MF_REG/q_REG_0" BEL
+        "datapath/A1_MF_REG/q_REG_7" BEL "datapath/A1_MF_REG/q_REG_6" BEL
+        "datapath/A1_MF_REG/q_REG_5" BEL "datapath/A1_MF_REG/q_REG_4" BEL
+        "datapath/A1_MF_REG/q_REG_3" BEL "datapath/A1_MF_REG/q_REG_2" BEL
+        "datapath/A1_MF_REG/q_REG_1" BEL "datapath/A1_MF_REG/q_REG_0" BEL
+        "datapath/A2_MF_REG/q_REG_7" BEL "datapath/A2_MF_REG/q_REG_6" BEL
+        "datapath/A2_MF_REG/q_REG_5" BEL "datapath/A2_MF_REG/q_REG_4" BEL
+        "datapath/A2_MF_REG/q_REG_3" BEL "datapath/A2_MF_REG/q_REG_2" BEL
+        "datapath/A2_MF_REG/q_REG_1" BEL "datapath/A2_MF_REG/q_REG_0" BEL
+        "datapath/A3_MF_REG/q_REG_7" BEL "datapath/A3_MF_REG/q_REG_6" BEL
+        "datapath/A3_MF_REG/q_REG_5" BEL "datapath/A3_MF_REG/q_REG_4" BEL
+        "datapath/A3_MF_REG/q_REG_3" BEL "datapath/A3_MF_REG/q_REG_2" BEL
+        "datapath/A3_MF_REG/q_REG_1" BEL "datapath/A3_MF_REG/q_REG_0" BEL
+        "datapath/P0_C0_REG/q_REG_39" BEL "datapath/P0_C0_REG/q_REG_38" BEL
+        "datapath/P0_C0_REG/q_REG_37" BEL "datapath/P0_C0_REG/q_REG_36" BEL
+        "datapath/P0_C0_REG/q_REG_35" BEL "datapath/P0_C0_REG/q_REG_34" BEL
+        "datapath/P0_C0_REG/q_REG_33" BEL "datapath/P0_C0_REG/q_REG_32" BEL
+        "datapath/P0_C0_REG/q_REG_31" BEL "datapath/P0_C0_REG/q_REG_30" BEL
+        "datapath/P0_C0_REG/q_REG_29" BEL "datapath/P0_C0_REG/q_REG_28" BEL
+        "datapath/P0_C0_REG/q_REG_27" BEL "datapath/P0_C0_REG/q_REG_26" BEL
+        "datapath/P0_C0_REG/q_REG_25" BEL "datapath/P0_C0_REG/q_REG_24" BEL
+        "datapath/P0_C0_REG/q_REG_23" BEL "datapath/P0_C0_REG/q_REG_22" BEL
+        "datapath/P0_C0_REG/q_REG_21" BEL "datapath/P0_C0_REG/q_REG_20" BEL
+        "datapath/P0_C0_REG/q_REG_19" BEL "datapath/P0_C0_REG/q_REG_18" BEL
+        "datapath/P0_C0_REG/q_REG_17" BEL "datapath/P0_C0_REG/q_REG_16" BEL
+        "datapath/P0_C0_REG/q_REG_15" BEL "datapath/P0_C0_REG/q_REG_14" BEL
+        "datapath/P0_C0_REG/q_REG_13" BEL "datapath/P0_C0_REG/q_REG_12" BEL
+        "datapath/P0_C0_REG/q_REG_11" BEL "datapath/P0_C0_REG/q_REG_10" BEL
+        "datapath/P0_C0_REG/q_REG_9" BEL "datapath/P0_C0_REG/q_REG_8" BEL
+        "datapath/P0_C0_REG/q_REG_7" BEL "datapath/P0_C0_REG/q_REG_6" BEL
+        "datapath/P0_C0_REG/q_REG_5" BEL "datapath/P0_C0_REG/q_REG_4" BEL
+        "datapath/P0_C0_REG/q_REG_3" BEL "datapath/P0_C0_REG/q_REG_2" BEL
+        "datapath/P0_C0_REG/q_REG_1" BEL "datapath/P0_C0_REG/q_REG_0" BEL
+        "control/val_MF" BEL "control/val_C0" BEL
+        "datapath/C0_MUL/IMULDP/regB_39" BEL "datapath/C0_MUL/IMULDP/regB_38"
+        BEL "datapath/C0_MUL/IMULDP/regB_37" BEL
+        "datapath/C0_MUL/IMULDP/regB_36" BEL "datapath/C0_MUL/IMULDP/regB_35"
+        BEL "datapath/C0_MUL/IMULDP/regB_34" BEL
+        "datapath/C0_MUL/IMULDP/regB_33" BEL "datapath/C0_MUL/IMULDP/regB_32"
+        BEL "datapath/C0_MUL/IMULDP/regB_31" BEL
+        "datapath/C0_MUL/IMULDP/regB_30" BEL "datapath/C0_MUL/IMULDP/regB_29"
+        BEL "datapath/C0_MUL/IMULDP/regB_28" BEL
+        "datapath/C0_MUL/IMULDP/regB_27" BEL "datapath/C0_MUL/IMULDP/regB_26"
+        BEL "datapath/C0_MUL/IMULDP/regB_25" BEL
+        "datapath/C0_MUL/IMULDP/regB_24" BEL "datapath/C0_MUL/IMULDP/regB_23"
+        BEL "datapath/C0_MUL/IMULDP/regB_22" BEL
+        "datapath/C0_MUL/IMULDP/regB_21" BEL "datapath/C0_MUL/IMULDP/regB_20"
+        BEL "datapath/C0_MUL/IMULDP/regB_19" BEL
+        "datapath/C0_MUL/IMULDP/regB_18" BEL "datapath/C0_MUL/IMULDP/regB_17"
+        BEL "datapath/C0_MUL/IMULDP/regB_16" BEL
+        "datapath/C0_MUL/IMULDP/regB_15" BEL "datapath/C0_MUL/IMULDP/regB_14"
+        BEL "datapath/C0_MUL/IMULDP/regB_13" BEL
+        "datapath/C0_MUL/IMULDP/regB_12" BEL "datapath/C0_MUL/IMULDP/regB_11"
+        BEL "datapath/C0_MUL/IMULDP/regB_10" BEL
+        "datapath/C0_MUL/IMULDP/regB_9" BEL "datapath/C0_MUL/IMULDP/regB_8"
+        BEL "datapath/C0_MUL/IMULDP/regB_7" BEL
+        "datapath/C0_MUL/IMULDP/regB_6" BEL "datapath/C0_MUL/IMULDP/regB_5"
+        BEL "datapath/C0_MUL/IMULDP/regB_4" BEL
+        "datapath/C0_MUL/IMULDP/regB_3" BEL "datapath/C0_MUL/IMULDP/regB_2"
+        BEL "datapath/C0_MUL/IMULDP/regB_1" BEL
+        "datapath/C0_MUL/IMULDP/regB_0" BEL "datapath/C0_MUL/IMULDP/regA_7"
+        BEL "datapath/C0_MUL/IMULDP/regA_6" BEL
+        "datapath/C0_MUL/IMULDP/regA_5" BEL "datapath/C0_MUL/IMULDP/regA_4"
+        BEL "datapath/C0_MUL/IMULDP/regA_3" BEL
+        "datapath/C0_MUL/IMULDP/regA_2" BEL "datapath/C0_MUL/IMULDP/regA_1"
+        BEL "datapath/C0_MUL/IMULDP/regA_0" BEL
+        "datapath/C1_MUL/IMULDP/regB_39" BEL "datapath/C1_MUL/IMULDP/regB_38"
+        BEL "datapath/C1_MUL/IMULDP/regB_37" BEL
+        "datapath/C1_MUL/IMULDP/regB_36" BEL "datapath/C1_MUL/IMULDP/regB_35"
+        BEL "datapath/C1_MUL/IMULDP/regB_34" BEL
+        "datapath/C1_MUL/IMULDP/regB_33" BEL "datapath/C1_MUL/IMULDP/regB_32"
+        BEL "datapath/C1_MUL/IMULDP/regB_31" BEL
+        "datapath/C1_MUL/IMULDP/regB_30" BEL "datapath/C1_MUL/IMULDP/regB_29"
+        BEL "datapath/C1_MUL/IMULDP/regB_28" BEL
+        "datapath/C1_MUL/IMULDP/regB_27" BEL "datapath/C1_MUL/IMULDP/regB_26"
+        BEL "datapath/C1_MUL/IMULDP/regB_25" BEL
+        "datapath/C1_MUL/IMULDP/regB_24" BEL "datapath/C1_MUL/IMULDP/regB_23"
+        BEL "datapath/C1_MUL/IMULDP/regB_22" BEL
+        "datapath/C1_MUL/IMULDP/regB_21" BEL "datapath/C1_MUL/IMULDP/regB_20"
+        BEL "datapath/C1_MUL/IMULDP/regB_19" BEL
+        "datapath/C1_MUL/IMULDP/regB_18" BEL "datapath/C1_MUL/IMULDP/regB_17"
+        BEL "datapath/C1_MUL/IMULDP/regB_16" BEL
+        "datapath/C1_MUL/IMULDP/regB_15" BEL "datapath/C1_MUL/IMULDP/regB_14"
+        BEL "datapath/C1_MUL/IMULDP/regB_13" BEL
+        "datapath/C1_MUL/IMULDP/regB_12" BEL "datapath/C1_MUL/IMULDP/regB_11"
+        BEL "datapath/C1_MUL/IMULDP/regB_10" BEL
+        "datapath/C1_MUL/IMULDP/regB_9" BEL "datapath/C1_MUL/IMULDP/regB_8"
+        BEL "datapath/C1_MUL/IMULDP/regB_7" BEL
+        "datapath/C1_MUL/IMULDP/regB_6" BEL "datapath/C1_MUL/IMULDP/regB_5"
+        BEL "datapath/C1_MUL/IMULDP/regB_4" BEL
+        "datapath/C1_MUL/IMULDP/regB_3" BEL "datapath/C1_MUL/IMULDP/regB_2"
+        BEL "datapath/C1_MUL/IMULDP/regB_1" BEL
+        "datapath/C1_MUL/IMULDP/regB_0" BEL "datapath/C1_MUL/IMULDP/regA_7"
+        BEL "datapath/C1_MUL/IMULDP/regA_6" BEL
+        "datapath/C1_MUL/IMULDP/regA_5" BEL "datapath/C1_MUL/IMULDP/regA_4"
+        BEL "datapath/C1_MUL/IMULDP/regA_3" BEL
+        "datapath/C1_MUL/IMULDP/regA_2" BEL "datapath/C1_MUL/IMULDP/regA_1"
+        BEL "datapath/C1_MUL/IMULDP/regA_0" BEL
+        "datapath/C2_MUL/IMULDP/regB_39" BEL "datapath/C2_MUL/IMULDP/regB_38"
+        BEL "datapath/C2_MUL/IMULDP/regB_37" BEL
+        "datapath/C2_MUL/IMULDP/regB_36" BEL "datapath/C2_MUL/IMULDP/regB_35"
+        BEL "datapath/C2_MUL/IMULDP/regB_34" BEL
+        "datapath/C2_MUL/IMULDP/regB_33" BEL "datapath/C2_MUL/IMULDP/regB_32"
+        BEL "datapath/C2_MUL/IMULDP/regB_31" BEL
+        "datapath/C2_MUL/IMULDP/regB_30" BEL "datapath/C2_MUL/IMULDP/regB_29"
+        BEL "datapath/C2_MUL/IMULDP/regB_28" BEL
+        "datapath/C2_MUL/IMULDP/regB_27" BEL "datapath/C2_MUL/IMULDP/regB_26"
+        BEL "datapath/C2_MUL/IMULDP/regB_25" BEL
+        "datapath/C2_MUL/IMULDP/regB_24" BEL "datapath/C2_MUL/IMULDP/regB_23"
+        BEL "datapath/C2_MUL/IMULDP/regB_22" BEL
+        "datapath/C2_MUL/IMULDP/regB_21" BEL "datapath/C2_MUL/IMULDP/regB_20"
+        BEL "datapath/C2_MUL/IMULDP/regB_19" BEL
+        "datapath/C2_MUL/IMULDP/regB_18" BEL "datapath/C2_MUL/IMULDP/regB_17"
+        BEL "datapath/C2_MUL/IMULDP/regB_16" BEL
+        "datapath/C2_MUL/IMULDP/regB_15" BEL "datapath/C2_MUL/IMULDP/regB_14"
+        BEL "datapath/C2_MUL/IMULDP/regB_13" BEL
+        "datapath/C2_MUL/IMULDP/regB_12" BEL "datapath/C2_MUL/IMULDP/regB_11"
+        BEL "datapath/C2_MUL/IMULDP/regB_10" BEL
+        "datapath/C2_MUL/IMULDP/regB_9" BEL "datapath/C2_MUL/IMULDP/regB_8"
+        BEL "datapath/C2_MUL/IMULDP/regB_7" BEL
+        "datapath/C2_MUL/IMULDP/regB_6" BEL "datapath/C2_MUL/IMULDP/regB_5"
+        BEL "datapath/C2_MUL/IMULDP/regB_4" BEL
+        "datapath/C2_MUL/IMULDP/regB_3" BEL "datapath/C2_MUL/IMULDP/regB_2"
+        BEL "datapath/C2_MUL/IMULDP/regB_1" BEL
+        "datapath/C2_MUL/IMULDP/regB_0" BEL "datapath/C2_MUL/IMULDP/regA_7"
+        BEL "datapath/C2_MUL/IMULDP/regA_6" BEL
+        "datapath/C2_MUL/IMULDP/regA_5" BEL "datapath/C2_MUL/IMULDP/regA_4"
+        BEL "datapath/C2_MUL/IMULDP/regA_3" BEL
+        "datapath/C2_MUL/IMULDP/regA_2" BEL "datapath/C2_MUL/IMULDP/regA_1"
+        BEL "datapath/C2_MUL/IMULDP/regA_0" BEL
+        "datapath/C3_MUL/IMULDP/regB_39" BEL "datapath/C3_MUL/IMULDP/regB_38"
+        BEL "datapath/C3_MUL/IMULDP/regB_37" BEL
+        "datapath/C3_MUL/IMULDP/regB_36" BEL "datapath/C3_MUL/IMULDP/regB_35"
+        BEL "datapath/C3_MUL/IMULDP/regB_34" BEL
+        "datapath/C3_MUL/IMULDP/regB_33" BEL "datapath/C3_MUL/IMULDP/regB_32"
+        BEL "datapath/C3_MUL/IMULDP/regB_31" BEL
+        "datapath/C3_MUL/IMULDP/regB_30" BEL "datapath/C3_MUL/IMULDP/regB_29"
+        BEL "datapath/C3_MUL/IMULDP/regB_28" BEL
+        "datapath/C3_MUL/IMULDP/regB_27" BEL "datapath/C3_MUL/IMULDP/regB_26"
+        BEL "datapath/C3_MUL/IMULDP/regB_25" BEL
+        "datapath/C3_MUL/IMULDP/regB_24" BEL "datapath/C3_MUL/IMULDP/regB_23"
+        BEL "datapath/C3_MUL/IMULDP/regB_22" BEL
+        "datapath/C3_MUL/IMULDP/regB_21" BEL "datapath/C3_MUL/IMULDP/regB_20"
+        BEL "datapath/C3_MUL/IMULDP/regB_19" BEL
+        "datapath/C3_MUL/IMULDP/regB_18" BEL "datapath/C3_MUL/IMULDP/regB_17"
+        BEL "datapath/C3_MUL/IMULDP/regB_16" BEL
+        "datapath/C3_MUL/IMULDP/regB_15" BEL "datapath/C3_MUL/IMULDP/regB_14"
+        BEL "datapath/C3_MUL/IMULDP/regB_13" BEL
+        "datapath/C3_MUL/IMULDP/regB_12" BEL "datapath/C3_MUL/IMULDP/regB_11"
+        BEL "datapath/C3_MUL/IMULDP/regB_10" BEL
+        "datapath/C3_MUL/IMULDP/regB_9" BEL "datapath/C3_MUL/IMULDP/regB_8"
+        BEL "datapath/C3_MUL/IMULDP/regB_7" BEL
+        "datapath/C3_MUL/IMULDP/regB_6" BEL "datapath/C3_MUL/IMULDP/regB_5"
+        BEL "datapath/C3_MUL/IMULDP/regB_4" BEL
+        "datapath/C3_MUL/IMULDP/regB_3" BEL "datapath/C3_MUL/IMULDP/regB_2"
+        BEL "datapath/C3_MUL/IMULDP/regB_1" BEL
+        "datapath/C3_MUL/IMULDP/regB_0" BEL "datapath/C3_MUL/IMULDP/regA_7"
+        BEL "datapath/C3_MUL/IMULDP/regA_6" BEL
+        "datapath/C3_MUL/IMULDP/regA_5" BEL "datapath/C3_MUL/IMULDP/regA_4"
+        BEL "datapath/C3_MUL/IMULDP/regA_3" BEL
+        "datapath/C3_MUL/IMULDP/regA_2" BEL "datapath/C3_MUL/IMULDP/regA_1"
+        BEL "datapath/C3_MUL/IMULDP/regA_0" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd2_1" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd1_1" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd2_1" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd1_1" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd1_1" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd2_2" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd1_2" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd1_2" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd2_2" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd2_1" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd1_2" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd2_1" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd1_1" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd2_2" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd2_3" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd1_3" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd2_3" BEL
+        "datapath/C1_MUL/IMULCT/current_state_FSM_FFd1_3" BEL
+        "datapath/C3_MUL/IMULCT/current_state_FSM_FFd2_4" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd1_3" BEL
+        "datapath/C0_MUL/IMULCT/current_state_FSM_FFd2_2" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd1_2" BEL
+        "datapath/C2_MUL/IMULCT/current_state_FSM_FFd2_3" BEL
+        "clk_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+
