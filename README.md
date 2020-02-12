@@ -4,12 +4,12 @@ Simple Pipeline Integer Multipiler
 ## Introduction
 This multipiler takes in 2 32-bit unsigned integer and produce a 64-bit unsigned integer, having 6 stages with the architecture as shown below:  
 ![Arch](https://github.com/YxdFlare/PipeIntMul/blob/modelsim/2.png)  
-Each small multipiler in stage C0 to C3 is a 8bit-32bit iterative multipiler, which takes 12 cycles to complete an operation.
+Each small multipiler in stage C0 to C3 is an 8bit-32bit iterative multipiler, which takes 12 cycles to complete an operation.
 
 ## Simulation Instructions  
 The current working testbench file is _test_PiptIntMul_varlat.v_.  
 If you are using Xilinx ISE, please remove or comment all _"\`include"_. The file dependencies are shown below.  
-The post_PAR simulation is currently not working.
+The post-PAR simulation is currently not working.
 
 - test_PipeIntMul_varlat.v
   - request_PipeIntMul.dat
