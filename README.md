@@ -7,10 +7,17 @@ This multiplier takes in 2 32-bit unsigned integer and produce a 64-bit unsigned
 Each small multiplier in stage C0 to C3 is an 8bit-32bit iterative multiplier, which takes 12 cycles to complete an operation.
 
 ## Simulation Instructions  
-The current working testbench file is _test_PiptIntMul_varlat.v_.  
+There are 2 testbench files: _test_PiptIntMul_varlat.v_ and _test_PiptIntMul_time.v_.
+_test_PiptIntMul_varlat.v_ is used for RTL simulation, in which all signals will change perfectly at the clock egde.  
+_test_PiptIntMul_time.v_ is used for post-PAR simulation with delay, in which all signals might not change perfectly at the clock egde.  
+There are 2 parameters you need to take care of in _test_PiptIntMul_time.v_: _min_pulsewidth_ and _max_dt_.
+You need to set _min_pulsewidth_ to be larger than the biggest possible glitch's pulse width. This is to avoid sampling at the glitches caused by static hazard.
+You need to set _max_dt_ to be larger than the biggest possible delay from the _commit_ signal to the actual data output, __plus__ the _min_pulsewidth_.
+You can adjust these parameters if you are sure that the output waveform is correct but the testbench is reporting "Failing". However, you should not increase _max_dt_ to be larger than your clock cycle time (you should not have to do so unless the design does not meet timing).
+![simtime](https://github.com/YxdFlare/PipeIntMul/blob/modelsim/3.png)
 If you are using Xilinx ISE, please remove or comment all _"\`include"_. The file dependencies are shown below.  
-The post-PAR simulation is currently not working.
 
+## File Denpencies
 - test_PipeIntMul_varlat.v
   - request_PipeIntMul.dat
   * response_PieIntMul.dat
