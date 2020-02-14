@@ -24,6 +24,18 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module test_PipeIntMul;
+
+  //--------------------------------------------------------------
+  //  Simulation timing parameters
+  //--------------------------------------------------------------
+
+  localparam min_pulsewidth = 2; // this parameter defines the minimum pulse width for any given output signal.
+  // change the parameter above to be larger than your largest possible glitch's pulse width.
+  
+  localparam max_dt = 6; // this parameter defines the maximum delay from the trigger signal to the watched signal.
+  // i.e. if we want to read "commit" after the rising edge of "clk", the trigger signal is clk and the watched signal is commit.
+  // change the parameter above to be larger than "min_pulsewidth" plus your circuit's maximum delay, but smaller than the clock period! 
+
 	
 	// clock generate
 	localparam clk_halfperiod = 10;
@@ -74,7 +86,6 @@ module test_PipeIntMul;
 	reg case_passing = 1;
   reg item_passed = 1;
 
-
   //--------------------------------------------------------------
   //  Netlisting
   //--------------------------------------------------------------
@@ -116,9 +127,7 @@ module test_PipeIntMul;
   //  output debouncing
   //--------------------------------------------------------------
   
-  localparam min_pulsewidth = 2; // this parameter defines the minimum pulse width for any given output signal.
-  // change the parameter above to be larger than your largest possible glitch's pulse width.
-  
+
   // debounce commit
   reg commit_db;
   reg commit_dbtmp;
@@ -257,18 +266,26 @@ module test_PipeIntMul;
   //--------------------------------------------------------------
   //  Test sink
   //--------------------------------------------------------------
-  
-  localparam max_dt = 6; // this parameter defines the maximum delay from the clock to the output signal.
-  // change the parameter above to be larger than "min_pulsewidth" and your circuit's maximum delay, but smaller than the clock period! 
-  
+ 
   integer timer;
   reg found;
-
+  integer timer_commit;
+  reg found_commit;
 
   always @(posedge clk) begin
     if (!sys_rst)
       if (sinkaddr < itemN) begin
-        if (commit_db) begin
+        timer_commit = 0;
+        found_commit = 0;
+        while (timer_commit < max_dt) begin
+            if (commit_db) // change here to be the expected value
+              found_commit = 1'b1;
+            else
+              found_commit = found_commit | 1'b0;
+            #(1);
+            timer_commit = timer_commit + 1;
+          end
+        if (found_commit) begin
           timer = 0;
           found = 0;
           while (timer < max_dt) begin
