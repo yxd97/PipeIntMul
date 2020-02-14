@@ -1,6 +1,5 @@
 `timescale 1ns / 100ps
-`include "H:/Documents/CREA/FPGA/Pipeline-IntMul/PipeIntMul_sim/netgen/par/PipeIntMul_timesim.v"
-
+`include "../PipeIntMul.v"
 
 ////////////////////////////////////////////////////////////////////////////////
 // Company: 
@@ -32,9 +31,9 @@ module test_PipeIntMul;
 	initial clk = 1'b0;
 	always #clk_halfperiod clk = ~clk;
 	
-	//----------------------------------------------
+	//-------------------------------------------------------------------
 	// Test Pipeline Integer Multiplier 
-	//----------------------------------------------
+	//-------------------------------------------------------------------
 	
 	// Test parameters
 	localparam caseN = 3;    // change HERE!!!
@@ -52,9 +51,9 @@ module test_PipeIntMul;
 	reg [inputN - 1:0] PipeIntMul_testcase_msg;
 	reg [outputN - 1:0] PipeIntMul_testcase_resp;
 	
-	// Initialize test source/ test sink mem
-	initial $readmemb("H:/Documents/CREA/FPGA/Pipeline-IntMul/PipeIntMul_sim/source/modelsim/request_PipeIntMul.dat",PipeIntMul_srcmem);
-  initial $readmemb("H:/Documents/CREA/FPGA/Pipeline-IntMul/PipeIntMul_sim/source/modelsim/response_PipeIntMul.dat",PipeIntMul_sinkmem);
+	// Initialize test source & test sink mem
+	initial $readmemb("./request_PipeIntMul.dat",PipeIntMul_srcmem);
+  initial $readmemb("./response_PipeIntMul.dat",PipeIntMul_sinkmem);
 	integer srcaddr = 0;
   integer sinkaddr = 0;
 	
@@ -74,6 +73,11 @@ module test_PipeIntMul;
 	integer Total = caseN;
 	reg case_passing = 1;
   reg item_passed = 1;
+
+
+  //--------------------------------------------------------------
+  //  Netlisting
+  //--------------------------------------------------------------
 
 	// Inputs
 	reg [31:0] intA;
@@ -108,20 +112,103 @@ module test_PipeIntMul;
 		.reset(core_reset)
 	);
 
-	initial begin
+  //--------------------------------------------------------------
+  //  output debouncing
+  //--------------------------------------------------------------
+  
+  localparam min_pulsewidth = 2; // this parameter defines the minimum pulse width for any given output signal.
+  // change the parameter above to be larger than your largest possible glitch's pulse width.
+  
+  // debounce commit
+  reg commit_db;
+  reg commit_dbtmp;
+  integer dbtimer_commit;
+  reg dbflag_commit;
+  always @(commit) begin
+    dbtimer_commit = 0;
+    commit_dbtmp = commit;
+    dbflag_commit = 1;
+    while (dbtimer_commit < min_pulsewidth) begin
+      if(commit_dbtmp == commit)
+        dbflag_commit = dbflag_commit & 1'b1;
+      else
+        dbflag_commit = 1'b0;
+      #(1);
+      dbtimer_commit = dbtimer_commit + 1;
+    end
+    if (!dbflag_commit)
+      commit_db = commit;
+    else
+      commit_db = commit_dbtmp;
+  end
+
+  // debounce oprand_rdy
+  reg oprand_rdy_db;
+  reg oprand_rdy_dbtmp;
+  integer dbtimer_oprand_rdy;
+  reg dbflag_oprand_rdy;
+  always @(oprand_rdy) begin
+    dbtimer_oprand_rdy = 0;
+    oprand_rdy_dbtmp = oprand_rdy;
+    dbflag_oprand_rdy = 1;
+    while (dbtimer_oprand_rdy < min_pulsewidth) begin
+      if(oprand_rdy_dbtmp == oprand_rdy)
+        dbflag_oprand_rdy = dbflag_oprand_rdy & 1'b1;
+      else
+        dbflag_oprand_rdy = 1'b0;
+      #(1);
+      dbtimer_oprand_rdy = dbtimer_oprand_rdy + 1;
+    end
+    if (!dbflag_oprand_rdy)
+      oprand_rdy_db = oprand_rdy;
+    else
+      oprand_rdy_db = oprand_rdy_dbtmp;
+  end
+
+  // debounce PipeIntMul_outv
+  reg [63:0] PipeIntMul_outv_db;
+  reg [63:0] PipeIntMul_outv_dbtmp;
+  integer dbtimer_PipeIntMul_outv;
+  reg dbflag_PipeIntMul_outv;
+  always @(PipeIntMul_outv) begin
+    dbtimer_PipeIntMul_outv = 0;
+    PipeIntMul_outv_dbtmp = PipeIntMul_outv;
+    dbflag_PipeIntMul_outv = 1;
+    while (dbtimer_PipeIntMul_outv < min_pulsewidth) begin
+      if(PipeIntMul_outv_dbtmp == PipeIntMul_outv)
+        dbflag_PipeIntMul_outv = dbflag_PipeIntMul_outv & 1'b1;
+      else
+        dbflag_PipeIntMul_outv = 1'b0;
+      #(1);
+      dbtimer_PipeIntMul_outv = dbtimer_PipeIntMul_outv + 1;
+    end
+    if (!dbflag_PipeIntMul_outv)
+      PipeIntMul_outv_db = PipeIntMul_outv;
+    else
+      PipeIntMul_outv_db = PipeIntMul_outv_dbtmp;
+  end
+
+  
+  //--------------------------------------------------------------
+  //  Test source
+  //--------------------------------------------------------------
+	reg sim_finish;
+  initial begin // initialize
 		// Initialize Inputs
+    sim_finish = 1'b0;
 		PipeIntMul_inpv = {64'd0}; // change HERE!!!
     sys_rst = 1'b1;
     sti_rst = 1'b1;
 
-
 		// Wait 10 cycles for global reset to finish
-		#(20*clk_halfperiod);
-
-		// Add stimulus here
-		#(clk_halfperiod);
+		#(21*clk_halfperiod);
     sys_rst = 1'b0;
     sti_rst = 1'b0;
+
+    // end simulation
+    while (!sim_finish) #(100);
+    $stop;
+
   end
   
   // test source
@@ -166,42 +253,57 @@ module test_PipeIntMul;
     else
       val_op <= 1'b0;
   end
+  
+  //--------------------------------------------------------------
+  //  Test sink
+  //--------------------------------------------------------------
+  
+  localparam max_dt = 6; // this parameter defines the maximum delay from the clock to the output signal.
+  // change the parameter above to be larger than "min_pulsewidth" and your circuit's maximum delay, but smaller than the clock period! 
+  
+  integer timer;
+  reg found;
 
-  // test sink
+
   always @(posedge clk) begin
-    if (sinkaddr < itemN && !(sys_rst)) begin
-      if (commit) begin
-        if (PipeIntMul_outv == PipeIntMul_sinkmem[sinkaddr][outputN - 1:0]) begin
-          item_passed <= 1'b1;
-          case_passing <= case_passing & 1'b1;
-        end else begin
-          item_passed <= 1'b0;
-          case_passing <= 1'b0;
-          $display("Case %0s FAILED at item %0d:",caselist[sinkCI],sinkaddr);
-          $display("\tExpected:%0h(%0d), Actual:%0h(%0d).",PipeIntMul_sinkmem[sinkaddr][outputN - 1:0],PipeIntMul_sinkmem[sinkaddr][outputN - 1:0],PipeIntMul_outv,PipeIntMul_outv);
-        end
-        
-        if (PipeIntMul_sinkmem[sinkaddr][outputN] == 1'b1) begin
-          sinkCI <= sinkCI + 1;
-          if(case_passing) begin
-            $display("Case %0s PASSED.",caselist[sinkCI]);
-            Passed <= Passed + 1;
-          end else Failed <= Failed + 1;
-        end
+    if (!sys_rst)
+      if (sinkaddr < itemN) begin
+        if (commit_db) begin
+          timer = 0;
+          found = 0;
+          while (timer < max_dt) begin
+            if (PipeIntMul_outv_db == PipeIntMul_sinkmem[sinkaddr][outputN - 1:0]) // change here to be the expected value
+              found = 1'b1;
+            else
+              found = found | 1'b0;
+            #(1);
+            timer = timer + 1;
+          end
+          if (found) begin
+            item_passed <= 1'b1;
+            case_passing <= case_passing & 1'b1;
+          end else begin
+            item_passed <= 1'b0;
+            case_passing <= 1'b0;
+            $display("Case %0s FAILED at item %0d:",caselist[sinkCI],sinkaddr);
+            $display("\tExpected:%0h(%0d), Actual:%0h(%0d).",PipeIntMul_sinkmem[sinkaddr][outputN - 1:0],PipeIntMul_sinkmem[sinkaddr][outputN - 1:0],PipeIntMul_outv,PipeIntMul_outv);
+          end
           
-        sinkaddr <= sinkaddr + 1;
-
-      end
-    end  
+          if (PipeIntMul_sinkmem[sinkaddr][outputN] == 1'b1) begin
+            sinkCI <= sinkCI + 1;
+            if(case_passing) begin
+              $display("Case %0s PASSED.",caselist[sinkCI]);
+              Passed <= Passed + 1;
+            end else Failed <= Failed + 1;
+          end
+          sinkaddr <= sinkaddr + 1;
+        end
+      end else begin
+        if (!sim_finish) $display("----- [ %0d PASSED, %0d FAILED, of %0d testcases] -----",Passed,Failed,Total);
+        sim_finish = 1'b1;
+      end 
   end
 
-  // print results
-  always @(sinkaddr) begin
-    if(sinkaddr >= itemN) begin
-      $display("----- [ %0d PASSED, %0d FAILED, of %0d testcases] -----",Passed,Failed,Total);
-      $stop;
-    end
-  end
 	
   
       
